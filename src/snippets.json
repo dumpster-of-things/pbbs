@@ -130,6 +130,11 @@
             "description": "Loop over a variable range of numbers"
         },
         {
+            "body": "# In addition to honoring quotation, this method conveniently exposes each argument's positional index.\nfor ((a=1;a<=$#;a++)); do\n    printf '%i: %s\\n' \$a \"\\${!a}\"\ndone",
+            "prefix": "loop_honorably",
+            "description": "Loop over positional parameters, consistently"
+        },
+        {
             "body": "arr=(apples oranges tomatoes)\n\n# Just elements.\nfor element in \"${arr[@]}\"; do\n    printf '%s\\n' \"\\$element\"\ndone",
             "prefix": "loop_over_an_array",
             "description": "Loop over an array"
